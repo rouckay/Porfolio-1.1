@@ -13,8 +13,12 @@
 /*-----------------------------------*\
   #RESPONSIVE FOR 370PX
 \*-----------------------------------*/
+body{
+  font-family:vazir-medium ;
+}
 
 @media (min-width: 370px) {
+
 
   /**
    * ABOUT

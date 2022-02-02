@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Personal Portfolio</title>
+  <title>Farhad Portfolio</title>
 
   <!--
     - custom css link
@@ -17,10 +17,20 @@
     - google font link
   -->
   <link href="https://fonts.googleapis.com/css?family=Jost:regular,500,800" rel="stylesheet" />
-
+  <style>
+    .section-title::after {
+      content: '';
+      position: absolute;
+      background: hsla(100, 100%, 100%, 0.2);
+      height: 2 px;
+      width: 150 px;
+      bottom: 0;
+      right: 0;
+    }
+  </style>
 </head>
 
-<body>
+<body dir="rtl" style="font-family: vazir;">
 
 
   <!--
@@ -40,7 +50,7 @@
       -->
 
       <button class="menu-open-btn">
-        <span>Menu</span>
+        <span>مینو</span>
         <ion-icon name="menu-outline"></ion-icon>
       </button>
 
@@ -137,21 +147,21 @@
             <img src="./assets/images/NewFarhad.jpg" alt="" class="intro-img" width="100%" loading="lazy">
           </div>
 
-          <p>Hi ther! I am</p>
+          <p>سلام علیکم زه</p>
 
           <div class="profile-name">
             <span>[</span>
-            <div>Farhad Rahmani</div>
+            <div>فرهاد رحمانی</div>
             <span>]</span>
           </div>
 
+          <p>یم</p>
         </div>
 
         <a href="#contact" class="intro-link">
           <span class="circle"></span>
-          <span class="link-underline">I’m available for a freelance job. Hire me</span>
+          <span class="link-underline">زه په انلاین ډول کارت کار ته هم تیار یم</span>
         </a>
-
       </section>
 
     </header>
@@ -166,21 +176,24 @@
         - #HOME
       -->
 
-      <div class="langButton" style="float: right;"><span style="color: aliceblue;">Select Language:
-        </span>
+      <div class="langButton" style="float: left;"><span style="color: aliceblue;">ژبه انتخاب کړې:</span>
         <button id="pashto" class="btn-primary">پشتو</button>
         <button id="pashto" class="btn-primary">دری</button>
         <button id="english" class="btn-primary">English</button>
       </div>
       <section class="section-padding" id="home">
+        <h1 class="section-subtitle" style="font-size: 60px;">معرفی</h1>
 
-        <h3 class="section-subtitle">Introduction</h3>
+        <h2 class="section-title"> UI/UX دیزاینر</h2>
 
-        <h2 class="section-title">UI/UX Designer</h2>
-
-        <p class="section-desc">I design and develop services for customers of all sizes,
-          specializing in creating stylish, modern websites,
-          web services and online stores.</p>
+        <p class="section-desc">زه کولای شم چی ویب پاڼه جوړه کړم او هم پرمختګ ورکړم ویب سایټ ته، په هر قسم اندازی سره،
+          او هم
+          ځانګړی
+          برخی ورته ورکړم، او بروشر، پوسټر ډ یزاین کړم، داکیومنټ یا هم سند ډ یزاین کړم، سره د انلاین خرڅلاو ویب پاڼی
+          ډ یزاین.</p>
+        <!-- <p class="section-desc">I design and develop services for customers of all sizes,
+          specializing in creating stylish, modern websites, Brosher, Posters, Documents Design
+          web services and online stores.</p> -->
 
         <img src="./assets/images/sign.png" width="200px" alt="" loading="lazy">
 
@@ -196,55 +209,55 @@
 
       <section class="section-padding" id="about">
 
-        <h3 class="section-subtitle">About me</h3>
+        <h3 class="section-subtitle">زما په باره کی</h3>
 
-        <h2 class="section-title">Biography</h2>
+        <h2 class="section-title">کره کتنه</h2>
 
-        <p class="section-desc">I'm a Freelancer Front-end Developer with over 12 years of experience.
-          I'm from San Francisco. I code and create web elements for amazing people
-          around the world. I like work with new people. New people are new experiences.</p>
+        <p class="section-desc">زه د کمپیوټر د پوستغالی جوړونکی یم، سره د ۳ کالونو تجربه کاری سره، زه د وردګو ولایت
+          اوسیدونکی یم، او بهترین پوستغالی او ویب پاڼی د بهترینو خلکو لپاره جوړم، زه خوښ هم چی د نویو خلکو سره کار وکړم
+          نوی خلک نوی تجربی دی .</p>
 
 
         <table class="about-table">
           <tr>
-            <th>Name</th>
-            <td>Farhad Rahmani</td>
+            <th>نوم</th>
+            <td>فرهاد رحمانی</td>
           </tr>
           <tr>
-            <th>Birthday</th>
-            <td>4th April 1990</td>
+            <th>د زږیدو کال </th>
+            <td>۱۳۷۵ / قوس / ۲۷</td>
           </tr>
           <tr>
-            <th>Age</th>
-            <td>25 years</td>
+            <th>عمر</th>
+            <td>۱۵ کلن</td>
           </tr>
           <tr>
-            <th>Address</th>
-            <td>Kabul Afghanistan</td>
+            <th>آدرس</th>
+            <td>کابل </td>
           </tr>
           <tr>
-            <th>Phone</th>
+            <th>د اړیکی شمیره</th>
             <td>
-              <a href="tel:+93766098885" class="link-underline">(+93)76 609 8885</a>
+              <a href="tel:+93766098885" class="link-underline">۰۷۶۶۰۹۸۸۸۵</a>
             </td>
           </tr>
           <tr>
-            <th>Email</th>
+            <th>ایمیل</th>
             <td>
-              <a href="mailto:farhadwardak2018@gmail.com" class="link-underline">farhadwardak2018@gmail.com</a>
+              <a href="mailto:brucewilson@gmail.com" class="link-underline">farhadwardak2018gmail.com</a>
             </td>
           </tr>
           <tr>
             <th>Twitter</th>
             <td>
-              <a href="#" class="link-underline">@farhadwardak2018.20</a>
+              <a href="#" class="link-underline">@farhadrahmani20</a>
             </td>
           </tr>
         </table>
 
         <button class="download-cv">
           <ion-icon name="cloud-download-outline"></ion-icon>
-          <span>Download cv</span>
+          <span>دنلود سی وی</span>
         </button>
 
 
@@ -252,14 +265,14 @@
 
           <ul class="tab-nav">
 
-            <li>
-              <button class="one tab-button active btn-primary">Experience</button>
+            <li class="btn-primary">
+              <button class="one tab-button active">تجربه</button>
             </li>
-            <li>
-              <button class="two tab-button btn-primary">Education</button>
+            <li class="btn-primary">
+              <button class="two tab-button">زده کړې</button>
             </li>
-            <li>
-              <button class="three tab-button btn-primary">Skills</button>
+            <li class="btn-primary">
+              <button class="three tab-button">محارتونه</button>
             </li>
 
           </ul>
@@ -268,6 +281,21 @@
 
             <div class="one tab-content active">
 
+
+
+              <div class="content-card">
+
+                <div class="card-head">
+                  <h4>Google llc</h4>
+                  <p>( 2019 — 2020 )</p>
+                </div>
+
+                <div class="card-body">
+                  <h3>Web Developer</h3>
+                  <p>I Have Created Unviersity Website For Qalam university 2019 With a lot of Functionality.</p>
+                </div>
+
+              </div>
               <div class="content-card">
 
                 <div class="card-head">
@@ -276,25 +304,9 @@
                 </div>
 
                 <div class="card-body">
-                  <h3>Sr. Front-end Engineer</h3>
-                  <p>Adipisicing Lorem ipsum dolor sit amet, consectetur elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-
-              </div>
-
-
-              <div class="content-card">
-
-                <div class="card-head">
-                  <h4>Google llc</h4>
-                  <p>( 2016 — 2018 )</p>
-                </div>
-
-                <div class="card-body">
-                  <h3>Front-end Developer</h3>
-                  <p>Adipisicing Lorem ipsum dolor sit amet, consectetur elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <h3>Sr. Graphic Designer</h3>
+                  <p>The Brosher, Poster, Street Bunner Designed For Qalam university With Best Tools Like Photoshop.
+                  </p>
                 </div>
 
               </div>
@@ -323,14 +335,13 @@
               <div class="content-card">
 
                 <div class="card-head">
-                  <h4>Frenify university</h4>
-                  <p>( 2014 — 2017 )</p>
+                  <h4>Graduated From university</h4>
+                  <p>( 2015 — 2019 )</p>
                 </div>
 
                 <div class="card-body">
                   <h3>Computer Science</h3>
-                  <p>Adipisicing Lorem ipsum dolor sit amet, consectetur elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p>I have Graduated From Saiyd Jamaluddin Afghani university Computer Science Faculty.</p>
                 </div>
 
               </div>
@@ -339,33 +350,15 @@
               <div class="content-card">
 
                 <div class="card-head">
-                  <h4>Edu university</h4>
-                  <p>( 2011 — 2014 )</p>
+                  <h4>Senior Web Developer</h4>
+                  <p>( 2017 — 2021 )</p>
                 </div>
-
                 <div class="card-body">
-                  <h3>Master Degree</h3>
-                  <p>Adipisicing Lorem ipsum dolor sit amet, consectetur elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <h3>Senior Web Developer</h3>
+                  <p>Gained Senior Web Developer Certificate From UDEMY.</p>
                 </div>
-
               </div>
 
-
-              <div class="content-card">
-
-                <div class="card-head">
-                  <h4>Clolumbia college</h4>
-                  <p>( 2007 — 2011 )</p>
-                </div>
-
-                <div class="card-body">
-                  <h3>Bachelor Degree</h3>
-                  <p>Adipisicing Lorem ipsum dolor sit amet, consectetur elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-
-              </div>
 
             </div>
 
@@ -378,6 +371,15 @@
                 <div class="progress-bar">
                   <div class="progress" style="width: 92%;"></div>
                   <div class="progress-rate" style="left: 92%;">92%</div>
+                </div>
+              </div>
+
+              <div class="skill-box">
+                <h4 class="skill-name">Adobe Illustrator</h4>
+
+                <div class="progress-bar">
+                  <div class="progress" style="width: 85%;"></div>
+                  <div class="progress-rate" style="left: 85%;">85%</div>
                 </div>
               </div>
 
@@ -400,11 +402,20 @@
               </div>
 
               <div class="skill-box">
-                <h4 class="skill-name">Adobe Illustrator</h4>
+                <h4 class="skill-name">JavaScript</h4>
 
                 <div class="progress-bar">
-                  <div class="progress" style="width: 85%;"></div>
-                  <div class="progress-rate" style="left: 85%;">85%</div>
+                  <div class="progress" style="width: 90%;"></div>
+                  <div class="progress-rate" style="left: 90%;">90%</div>
+                </div>
+              </div>
+
+              <div class="skill-box">
+                <h4 class="skill-name">React JS</h4>
+
+                <div class="progress-bar">
+                  <div class="progress" style="width: 75%;"></div>
+                  <div class="progress-rate" style="left: 75%;">75%</div>
                 </div>
               </div>
 
@@ -821,16 +832,16 @@
 
         <div class="address">
           <h4>Address</h4>
-          <address>69 Queen St, London, United Kingdom</address>
+          <address>Qargha, Ghazi Mohammad Jan Khan City, Kabul Afghanistan</address>
         </div>
 
         <div class="phone">
           <h4>Phone</h4>
-          <a href="tel:+1234567890">(+93)76 609 8885</a>
+          <a href="tel:+1234567890">(+93)766 098 885</a>
         </div>
 
         <div class="email">
-          <a href="mailto:farhadwardak2018@gmail.com" class="link-underline">farhadwardak2018@gmail.com</a>
+          <a href="mailto:farhadwardak2018@gmail.com" class="link-underline">farhadwardak2018gmail.com</a>
         </div>
 
       </section>
@@ -854,7 +865,7 @@
         <p class="copyright">
           Copyright © 2021. All rights reserved.
           <br>
-          Developed by <a href="#" class="link-underline">Farhad Rahmani</a>
+          Developed by <a href="#" class="link-underline">Farhad Rahmani Wardak</a>
         </p>
 
       </div>
@@ -866,12 +877,12 @@
   <script>
     // Change Direction of Site
     var languageButton = document.querySelector('.langButton');
-    var pashtoBtn = document.querySelector('#pashto');
+    var pashtoBtn = document.querySelector('#english');
     // var englishBtn = document.querySelector('#english');
     pashtoBtn.onclick = function () {
-      window.location = 'pashto.html';
-    }
+      window.location = 'index.html';
 
+    }
 
 // Change Direction of Site
 
