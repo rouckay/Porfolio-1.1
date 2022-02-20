@@ -33,9 +33,9 @@ body{
   margin: 10px;
 }
 .btn-primary:hover{
-  background-color: aliceblue;
-  color: black;
-  transition: 1s;
+  background-color: rgb(18, 19, 19);
+  color: white;
+  transition: .5s;
 }
 /* language div */
 .langButton{
@@ -46,51 +46,32 @@ body{
 
 @font-face {
   font-family: Vazir;
-  src: url('Vazir-Bold.eot');
-  src: url('Vazir-Bold.eot?#iefix') format('embedded-opentype'),
-       url('Vazir-Bold.woff2') format('woff2'),
-       url('Vazir-Bold.woff') format('woff'),
-       url('Vazir-Bold.ttf') format('truetype');
+  src: url('BAHIJ\ HELVETICA\ NEUE-ROMAN.TTF') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
-  font-family: Vazir-bold;
-  src: url('Vazir-Black.eot');
-  src: url('Vazir-Black.eot?#iefix') format('embedded-opentype'),
-       url('Vazir-Black.woff2') format('woff2'),
-       url('Vazir-Black.woff') format('woff'),
-       url('Vazir-Black.ttf') format('truetype');
+  font-family: bahij-madium;
+  src: url('BAHIJ\ HELVETICA\ NEUE-LIGHT.TTF') format('truetype');
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
   font-family: Vazir-medium;
-  src: url('Vazir-Medium.eot');
-  src: url('Vazir-Medium.eot?#iefix') format('embedded-opentype'),
-       url('Vazir-Medium.woff2') format('woff2'),
-       url('Vazir-Medium.woff') format('woff'),
-       url('Vazir-Medium.ttf') format('truetype');
+  src: url('BAHIJ\ HELVETICA\ NEUE-ROMAN.TTF') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: Vazir;
-  src: url('Vazir-Light.eot');
-  src: url('Vazir-Light.eot?#iefix') format('embedded-opentype'),
-       url('Vazir-Light.woff2') format('woff2'),
-       url('Vazir-Light.woff') format('woff'),
-       url('Vazir-Light.ttf') format('truetype');
+  src: url('BAHIJ\ HELVETICA\ NEUE-ROMAN.TTF') format('truetype');
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: Vazir;
   src: url('Vazir-Thin.eot');
-  src: url('Vazir-Thin.eot?#iefix') format('embedded-opentype'),
-       url('Vazir-Thin.woff2') format('woff2'),
-       url('Vazir-Thin.woff') format('woff'),
-       url('Vazir-Thin.ttf') format('truetype');
+  src: url('BAHIJ\ HELVETICA\ NEUE-LIGHT.TTF') format('truetype');
   font-weight: 100;
   font-style: normal;
 }
@@ -122,11 +103,12 @@ button {
   font-family:vazir-medium ;
 
 }
-
 input, textarea { font: inherit; font-family:vazir-medium ; }
 
 img, ion-icon { display: block; }
-
+.intro-img{
+  border: 6px double #3c0a0a;
+}
 a, span { display: inline-block; }
 
 html {
@@ -153,7 +135,6 @@ html {
   background: var(--eerie-black-dark);
   overflow: hidden;
 }
-
 header {
   position: relative;
   overflow: hidden;
@@ -181,17 +162,17 @@ header {
 }
 
 .nav {
-  background: var(--eerie-black);
+  background: #1a1915;
   position: absolute;
-  top:    0;
+  top: 0;
   right: -100%;
   height: 100vh;
-  width:  100%;
+  width: 100%;
   padding: 100px 20px;
-  display:         flex;
-  flex-direction:  column;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items:     start;
+  align-items: start;
   overflow: hidden;
   transition: 0.75s ease;
   z-index: 10;
@@ -296,6 +277,7 @@ header {
 .link-underline {
   border-bottom: 1px solid hsla(100, 100%, 100%, 0.2);
   transition: var(--default-transition);
+  color: rgb(221, 186, 186);
 }
 
 .link-underline:hover { border-color: hsla(100, 100%, 100%, 0.4); }
@@ -315,7 +297,7 @@ header {
 
 .intro-border {
   position: absolute;
-  border: 1px solid hsla(100, 100%, 100%, 0.2);
+  border: 1px dashed hsla(100, 100%, 100%, 0.2);
   transition: var(--default-transition);
   pointer-events: none;
 }
@@ -378,7 +360,7 @@ header {
   #REPEATED ELEMENT STYLE
 \*-----------------------------------*/
 
-.section-padding { padding: 80px 10px; }
+.section-padding { padding: 64px 50px; }
 
 .section-subtitle {
   color: var(--liver-chestunut);
@@ -386,7 +368,7 @@ header {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 .section-title {
@@ -403,13 +385,13 @@ header {
   position: absolute;
   background: hsla(100, 100%, 100%, 0.2);
   height: 2px;
-  width:  150px;
+  width: 150px;
   bottom: 0;
-  left:   0;
+  right: 0;
 }
 
 .section-desc {
-  color: var(--battleship-gray);
+  color: #e3d3d3;
   font-size: var(--fs-4);
   margin-bottom: 60px;
 }
@@ -425,16 +407,21 @@ header {
 .about-table {
   width: 100%;
   border-collapse: collapse;
-  text-align: left;
+  text-align: right;
   font-size: var(--fs-5);
   margin-bottom: 40px;
-  margin-top:    80px;
+  margin-top: 24px;
 }
 
 .about-table tr {
   display:        flex;
   flex-direction: column;
   gap: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-left: 5px solid rgb(232, 178, 178);
+  border-right: 5px solid rgb(232, 178, 178);
+  background-color: rgba(232, 178, 178, 0.097);
 }
 
 .about-table tr:not(:last-child) { margin-bottom: 20px; }
@@ -448,12 +435,12 @@ header {
 .about-table td { color: var(--gainsboro); }
 
 .download-cv {
-  border: 2px solid hsla(100, 100%, 100%, 0.2);
+  border: 3px dashed hsla(100, 100%, 100%, 0.2);
   width: 100%;
   padding: 60px 0;
   color: var(--battleship-gray);
-  display:         flex;
-  flex-direction:  column;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -510,7 +497,7 @@ header {
 }
 
 .tab-nav li .tab-button.active {
-  color: var(--liver-chestunut);
+  color: #dbc8c8;
   border-color: var(--liver-chestunut);
 }
 
@@ -535,8 +522,8 @@ header {
 
 .content-card {
   position: relative;
-  background: var(--smoky-black);
-  border: 1px solid var(--eerie-black);
+  background: #12110eb0;
+  border: 1px dashed var(--eerie-black);
   padding: 40px;
   margin-bottom: 20px;
 }
@@ -545,10 +532,10 @@ header {
   content: '';
   position: absolute;
   background: hsla(100, 100%, 100%, 0.2);
-  width:  3px;
-  height: 50px;
-  top:   50%;
-  left: -1px;
+  width: 3px;
+  height: 127px;
+  top: 50%;
+  left: 10px;
   transform: translateY(-50%);
 }
 
@@ -773,8 +760,8 @@ header {
 \*-----------------------------------*/
 
 .service-card {
-  background: var(--smoky-black);
-  border: 1px solid var(--eerie-black);
+  background: #0e0d0c;
+  border: 1px dashed var(--eerie-black);
   margin-bottom: 20px;
 }
 
@@ -787,8 +774,8 @@ header {
   content: '';
   position: absolute;
   background: hsla(100, 100%, 100%, 0.2);
-  width:  3px;
-  height: 50px;
+  width: 3px;
+  height: 58px;
   top: 50%;
   left: -1px;
   transform: translateY(-50%);
@@ -836,15 +823,15 @@ header {
 }
 
 #customers .wrapper .img-box {
-  background: var(--smoky-black);
+  background: #141310;
   height: 200px;
-  display:         flex;
+  display: flex;
   justify-content: center;
-  align-items:     center;
+  align-items: center;
   transition: var(--default-transition);
 }
 
-#customers .wrapper .img-box:hover { background: var(--eerie-black); }
+#customers .wrapper .img-box:hover { background: #2b2925 }
 
 /**
  * testimonials 
@@ -920,7 +907,7 @@ header {
 .article-box .article-name:hover { color: var(--liver-chestunut); }
 
 .load-more {
-  border: 2px solid hsla(100, 100%, 100%, 0.2);
+  border: 1px dashed hsl(0deg 0% 100% / 48%);
   padding: 20px;
   width: 100%;
   text-align: center;
@@ -969,8 +956,8 @@ header {
   display: block;
   width: 100%;
   padding: 20px;
-  background: transparent;
-  border: 1px solid hsla(100, 100%, 100%, 0.2);
+  background: #1a171721;
+  border: 0.5px dashed hsla(100, 100%, 100%, 0.2);
   color: var(--light-gray);
   letter-spacing: 0.5px;
   outline: none;
@@ -991,7 +978,7 @@ header {
   font-size: var(--fs-5);
   font-weight: 600;
   text-transform: uppercase;
-  border: 2px solid hsla(100, 100%, 100%, 0.2);
+  border: 1px dashed hsla(100, 100%, 100%, 0.2);
   width: 100%;
   text-align: center;
   padding: 15px;
@@ -1044,7 +1031,7 @@ header {
 .footer {
   position: relative;
   padding: 50px 10px;
-  border-top: 1px solid hsla(100, 100%, 100%, 0.2);
+  border-top: 1px dashed hsla(100, 100%, 100%, 0.2);
 }
 
 .go-top {

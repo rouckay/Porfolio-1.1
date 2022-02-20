@@ -8,8 +8,8 @@
   <title>Interactive Personal Portfolio</title>
 
   <!--
-    - custom css link
-  -->
+      - custom css link
+    -->
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="./assets/css/media_query.css">
 
@@ -17,11 +17,10 @@
     - google font link
   -->
   <link href="https://fonts.googleapis.com/css?family=Jost:regular,500,800" rel="stylesheet" />
-
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
 
   <!--
     - container
@@ -126,6 +125,7 @@
         - header intro
       -->
 
+      <canvas id="c" style="position: absolute;opacity: 0.3;"></canvas>
       <section class="intro section-padding">
 
         <div class="intro-profile">
@@ -169,7 +169,7 @@
       <div class="langButton" style="float: right;"><span style="color: aliceblue;">Select Language:
         </span>
         <button id="pashto" class="btn-primary">پشتو</button>
-        <button id="pashto" class="btn-primary">دری</button>
+        <button id="dari" class="btn-primary">دری</button>
         <button id="english" class="btn-primary">English</button>
       </div>
       <section class="section-padding" id="home">
@@ -205,7 +205,7 @@
           around the world. I like work with new people. New people are new experiences.</p>
 
 
-        <table class="about-table">
+        <table class="about-table" style="text-align: left;">
           <tr>
             <th>Name</th>
             <td>Farhad Rahmani</td>
@@ -709,51 +709,6 @@
           <article class="article-box">
 
             <div class="img-box">
-              <img src="./assets/images/article-1.jpg" alt="" width="100%" loading="lazy">
-            </div>
-
-            <p class="publish-date">September 22, 2021</p>
-
-            <h3 class="article-name">
-              <a href="#">Five Solid Evidences Attending Design Is Good For Your Career Development.</a>
-            </h3>
-
-          </article>
-
-
-          <article class="article-box">
-
-            <div class="img-box">
-              <img src="./assets/images/article-2.jpg" alt="" width="100%" loading="lazy">
-            </div>
-
-            <p class="publish-date">September 17, 2021</p>
-
-            <h3 class="article-name">
-              <a href="#">Ten Mind-Blowing Reasons Why Design Is Using This Technique For Exposure.</a>
-            </h3>
-
-          </article>
-
-
-          <article class="article-box">
-
-            <div class="img-box">
-              <img src="./assets/images/article-3.jpg" alt="" width="100%" loading="lazy">
-            </div>
-
-            <p class="publish-date">September 04, 2021</p>
-
-            <h3 class="article-name">
-              <a href="#">I Will Tell You The Truth About Design In The Next 60 Seconds.</a>
-            </h3>
-
-          </article>
-
-
-          <article class="article-box">
-
-            <div class="img-box">
               <img src="./assets/images/article-4.jpg" alt="" width="100%" loading="lazy">
             </div>
 
@@ -862,19 +817,48 @@
     </main>
 
   </div>
-
   <script>
     // Change Direction of Site
     var languageButton = document.querySelector('.langButton');
     var pashtoBtn = document.querySelector('#pashto');
+    var dari = document.querySelector('#dari');
     // var englishBtn = document.querySelector('#english');
     pashtoBtn.onclick = function () {
       window.location = 'pashto.html';
     }
+    dari.onclick = function () {
+      window.location = "dari.html";
+    }
+    // Change Direction of Site
+    // NEWS API
+    var html = document.querySelector('.article-grid');
+    newsAPI()
+    async function newsAPI() {
+      var data = await fetch("https://newsapi.org/v2/top-headlines?category=technology&apiKey=bcb346e5e9814ee7acfea7b82c2bf508").then(async function (resp) {
+        var fetch = await resp.json();
+        var data = fetch.articles;
+        console.log(fetch.articles)
+        var htmData;
+        data.forEach(ele => {
+          htmData += `
+        <article class="article-box">
+        <div class="img-box">
+          <img src="${ele.urlToImage}" alt="${ele.urlToImage}" width="100%" loading="lazy">
+        </div>
+        <p class="publish-date">${ele.publishedAt}</p>
+        <h3 class="article-name">
+          <a href="${ele.url}">${ele.title}.</a>
+        </h3>
+        </article>
+        `;
+          html.innerHTML = htmData;
+        });
+      }).catch((errr) => {
+        console.log(errr);
+      })
+    }
 
-
-// Change Direction of Site
-
+// END NEWS API
   </script>
 
 
@@ -889,6 +873,7 @@
   <!--
    - ionicon link
   -->
+  <script src="script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
